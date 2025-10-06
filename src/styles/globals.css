@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* sensible defaults (dark theme) */
+:root {
+  --background: #0a0a0a;
+  /* page background */
+  --foreground: #ededed;
+  /* main text */
+
+  /* more defaults used across components */
+  --nav-bg: #0b1220;
+  --nav-text: #f8fafc;
+  --card-bg: #0f1724;
+  --card-text: #e6eef8;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --link: #60a5fa;
+  --accent: #60a5fa;
+}
+
+/* Explicit theme overrides (set on <html data-theme="light|dark">) */
+[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #111827;
+
+  --nav-bg: #080037;
+  --nav-text: #111827;
+  --card-bg: #ffffff;
+  --card-text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --link: #1d4ed8;
+  --accent: #2563eb;
+}
+
+[data-theme="dark"] {
+  /* keep dark values same as default so explicitly setting dark keeps parity */
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  --nav-bg: #0b1220;
+  --nav-text: #f8fafc;
+  --card-bg: #0f1724;
+  --card-text: #e6eef8;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --link: #60a5fa;
+  --accent: #60a5fa;
+}
+
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* helpers to use CSS variables in place of Tailwind color utilities */
+.bg-card {
+  background-color: var(--card-bg);
+}
+
+.text-card {
+  color: var(--card-text);
+}
+
+.nav-bg {
+  background-color: var(--nav-bg);
+}
+
+.nav-text {
+  color: var(--nav-text);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.border-var {
+  border-color: var(--border);
+}
+
+.link-var {
+  color: var(--link);
+}
+
+.accent {
+  color: var(--accent);
+}
