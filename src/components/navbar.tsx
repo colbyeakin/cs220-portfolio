@@ -32,7 +32,7 @@ const NavBar: React.FC = () => {
             <li>
               <a
                 href="/"
-                className="transition duration-200 ease-in-out hover:underline link-var"
+                className="transition duration-200 ease-in-out hover:underline"
               >
                 Home
               </a>
@@ -40,7 +40,7 @@ const NavBar: React.FC = () => {
             <li>
               <a
                 href="/about"
-                className="transition duration-200 ease-in-out hover:underline link-var"
+                className="transition duration-200 ease-in-out hover:underline"
               >
                 About
               </a>
@@ -48,7 +48,7 @@ const NavBar: React.FC = () => {
             <li>
               <a
                 href="/projects"
-                className="transition duration-200 ease-in-out hover:underline link-var"
+                className="transition duration-200 ease-in-out hover:underline"
               >
                 Projects
               </a>
@@ -56,7 +56,7 @@ const NavBar: React.FC = () => {
             <li>
               <a
                 href="/contact"
-                className="transition duration-200 ease-in-out hover:underline link-var"
+                className="transition duration-200 ease-in-out hover:underline"
               >
                 Contact
               </a>

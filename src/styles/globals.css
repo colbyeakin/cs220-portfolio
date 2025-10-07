@@ -22,9 +22,8 @@
 [data-theme="light"] {
   --background: #ffffff;
   --foreground: #111827;
-
   --nav-bg: #080037;
-  --nav-text: #111827;
+  --nav-text: #ffffff;
   --card-bg: #ffffff;
   --card-text: #111827;
   --muted: #6b7280;
