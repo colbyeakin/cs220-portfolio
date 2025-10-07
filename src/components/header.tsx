@@ -9,11 +9,7 @@ const Header: React.FC = () => {
         <header className="nav-bg nav-text">
             <div className="container mx-auto px-4 py-3">
                 <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                        <ThemeToggle />
-                        <div className="text-white font-semibold">Colby Eakin</div>
-                    </div>
-
+                    <ThemeToggle />
                     <div>
                         <NavBar />
                     </div>
