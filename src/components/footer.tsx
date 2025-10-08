@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     return (
         <footer className="nav-bg nav-text py-4 mt-10 border-t border-var">
             <div className="container mx-auto text-center">
-                <p>&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Colby Eakin. All rights reserved.</p>
             </div>
         </footer>
     );

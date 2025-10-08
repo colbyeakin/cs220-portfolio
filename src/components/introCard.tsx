@@ -12,9 +12,27 @@ const IntroCard: React.FC = () => {
                     engineer with a passion for building delightful user experiences.
                 </p>
                 <div className="flex space-x-4 mt-6">
-                    <a href="https://www.linkedin.com/in/colby-eakin/" aria-label="LinkedIn"><img src="/linkedin-logo.png" alt="LinkedIn" className="h-6 w-6" /></a>
-                    <a href="https://www.facebook.com/colby.eakin.2025" aria-label="Facebook"><img src="/facebook-logo.png" alt="Facebook" className="h-6 w-6" /></a>
-                    <a href="https://github.com/colbyeakin" aria-label="Github"><img src="/github-logo.png" alt="Github" className="h-6 w-6" /></a>
+                    <a
+                        href="https://www.linkedin.com/in/colby-eakin/"
+                        aria-label="LinkedIn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    ><img src="/linkedin-logo.png" alt="LinkedIn" className="h-6 w-6" />
+                    </a>
+                    <a
+                        href="https://www.facebook.com/colby.eakin.2025"
+                        aria-label="Facebook"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    ><img src="/facebook-logo.png" alt="Facebook" className="h-6 w-6" />
+                    </a>
+                    <a
+                        href="https://github.com/colbyeakin"
+                        aria-label="Github"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    ><img src="/github-logo.png" alt="Github" className="h-6 w-6" />
+                    </a>
                 </div>
             </div>
         </div>

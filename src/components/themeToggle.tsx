@@ -5,25 +5,25 @@ import React, { useEffect, useState } from "react";
 const THEME_KEY = "site-theme";
 
 const ThemeToggle: React.FC = () => {
-    const [theme, setTheme] = useState<"light" | "dark">(() => {
-        if (typeof window === "undefined") return "dark";
-        return (
-            (localStorage.getItem(THEME_KEY) as "light" | "dark") ||
-            (window.matchMedia &&
-                window.matchMedia("(prefers-color-scheme: light)").matches
-                ? "light"
-                : "dark")
-        );
-    });
+    const [theme, setTheme] = useState<"light" | "dark" | null>(null);
 
     useEffect(() => {
-        document.documentElement.setAttribute("data-theme", theme);
-        try {
+        // Get stored or system theme
+        const stored = localStorage.getItem(THEME_KEY) as "light" | "dark" | null;
+        const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        const initial = stored || (prefersLight ? "light" : "dark");
+        setTheme(initial);
+        document.documentElement.setAttribute("data-theme", initial);
+    }, []);
+
+    useEffect(() => {
+        if (theme) {
+            document.documentElement.setAttribute("data-theme", theme);
             localStorage.setItem(THEME_KEY, theme);
-        } catch {
-            /* ignore */
         }
     }, [theme]);
+
+    if (!theme) return null; // 👈 Prevent render until theme known
 
     return (
         <div className="absolute top-4 right-4 z-50">
@@ -34,7 +34,7 @@ const ThemeToggle: React.FC = () => {
                 title="Toggle theme"
             >
                 {theme === "dark" ? (
-                    // ☀️ White Sun Icon (for switching to light mode)
+                    // ☀️ Sun icon
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="white"
@@ -50,7 +50,7 @@ const ThemeToggle: React.FC = () => {
                         />
                     </svg>
                 ) : (
-                    // 🌙 White Moon Icon (for switching to dark mode)
+                    // 🌙 Moon icon
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="white"
