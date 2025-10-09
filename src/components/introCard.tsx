@@ -31,7 +31,7 @@ const IntroCard: React.FC = () => {
                         aria-label="Github"
                         target="_blank"
                         rel="noopener noreferrer"
-                    ><img src="/github-logo.png" alt="Github" className="h-6 w-6" />
+                    ><img src="/github-logo.png" alt="Github" className="h-6 w-6 github-logo" />
                     </a>
                 </div>
             </div>

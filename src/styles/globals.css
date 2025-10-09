@@ -64,6 +64,15 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.github-logo {
+  filter: invert(0);
+  transition: filter 0.3s ease;
+}
+
+[data-theme='dark'] .github-logo {
+  filter: invert(1);
+}
+
 
 
 :root {

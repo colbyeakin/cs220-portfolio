@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "next-themes";
 
 export default function Page() {
     return (
@@ -11,18 +12,20 @@ export default function Page() {
                         </h1>
                         <p className="text-neutral-400 mb-4 leading-relaxed">
                             I'm a student at Ensign College with the aspiration of becoming a
-                            Walt Disney Imagineer. I love to design and create, and I am always
-                            looking for new opportunities to learn and grow.
+                            Walt Disney Imagineer. I’m passionate about design and creativity,
+                            always seeking new opportunities to learn and grow.
                         </p>
                         <p className="text-neutral-400 mb-4 leading-relaxed">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-                            perspiciatis officiis tempora! Nostrum, sapiente quas. Quasi minima
-                            possimus pariatur laudantium.
+                            In my free time, I enjoy playing the guitar and piano, exploring my
+                            love for music and artistic expression. I also love traveling and
+                            spending time outdoors, discovering new places, learning new things,
+                            and meeting people from all walks of life.
                         </p>
                         <p className="text-neutral-400 mb-4 leading-relaxed">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-                            perspiciatis officiis tempora! Nostrum, sapiente quas. Quasi minima
-                            possimus pariatur laudantium.
+                            Professionally, I’m driven by the challenge of turning imagination into
+                            reality. I love bringing ideas to life through storytelling, design, and
+                            creative problem-solving—and I’m always excited to find new ways to inspire
+                            others through my work.
                         </p>
                     </div>
                     <div className="flex justify-center md:justify-end">
@@ -55,7 +58,7 @@ export default function Page() {
                                 rel="noopener noreferrer"
                                 className="flex items-center space-x-2 px-4 py-4"
                             >
-                                <img src="/github-logo.png" alt="Github" className="h-6 w-6 filter dark:invert" />
+                                <img src="/github-logo.png" alt="Github" className="h-6 w-6 github-logo" />
                                 <span>Follow me on Github</span>
                             </a>
                         </div>
