@@ -9,6 +9,8 @@ export default function ContactForm() {
     const [showPopup, setShowPopup] = useState(false);
     const formRef = useRef<HTMLFormElement | null>(null);
 
+    // Ensure formId is defined
+
     if (!formId) {
         return (
             <p className="text-red-600 font-semibold">
